@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Webpage with Details</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #444;
+    }
+
+    .mobile-menu a {
+      padding: 10px 20px;
+      border-top: 1px solid #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .content h1, section h2 {
+      color: #333;
+    }
+
+    .content p, section p {
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MySite</div>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <section class="content" id="home">
+    <h1>Welcome to My Webpage</h1>
+    <p>This webpage helps you to find the services provided by us and how to contact us.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a team of passionate developers and designers who create responsive, user-friendly websites. Our mission is to help businesses go digital with elegant and functional web solutions.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer a variety of services including:</p>
+    <ul>
+      <li>🌐 Website Design & Development</li>
+      <li>📱 Mobile-First Responsive Layouts</li>
+      <li>🔒 Website Security & Optimization</li>
+      <li>⚙️ Custom Web Applications</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📧 Email: nitndola15@gmail.com</p>
+    <p>📞 Phone: +91 7307158863</p>
+    <p>📍 Address: Srikakulam, Pathapatnam, India</p>
+  </section>
+
+  <footer>
+    &copy; 2025 MySite. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
